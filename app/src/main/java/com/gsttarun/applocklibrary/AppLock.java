@@ -14,5 +14,8 @@ public class AppLock {
         return false;
     }
 
+    public boolean delete(String keyName) {
+        return false;
+    }
 
 }

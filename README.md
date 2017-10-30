@@ -9,7 +9,7 @@ Functionality:
 - ‎Support multiple password types concurrently
 - ‎Encrypt and save the passwords
 - ‎Auto validate after number of characters entered
-- Developer
+- Developer choice for numeric keypad count
 
 
 Customisations:

@@ -3,6 +3,9 @@ package com.gsttarun.applocklibrary;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 
+/**
+ * This is the Base activity. This should be extended to use the library.
+ */
 public class AppLockActivity extends AppCompatActivity {
     @Override
     public void onResume() {

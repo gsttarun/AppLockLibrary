@@ -11,6 +11,7 @@ Proposed functionality/features of the library:
 - ‎Encrypt and save the passwords
 - ‎Auto validate after number of characters entered
 - Random numeric keypad
+- Developer
 
 
 Customisations:

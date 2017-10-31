@@ -24,3 +24,4 @@ Customisations:
 - ‎multiple layout types
 - ‎custom icon image
 - ‎hide/show pattern
+- number of attempts after which to consider failure

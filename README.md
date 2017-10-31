@@ -11,7 +11,6 @@ Functionality:
 - ‎Auto validate after number of characters entered
 - Developer choice for numeric keypad count
 
-
 Customisations:
 - ‎numeric key length
 - ‎background color / image

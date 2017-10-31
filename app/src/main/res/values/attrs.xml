@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AppLockView">
+        <attr name="lockType" format="integer" />
+    </declare-styleable>
+
+    <attr name="lockType">
+        <enum name="pattern" value="0" />
+        <enum name="numeric" value="1" />
+        <enum name="alphanumeric" value="2" />
+        <enum name="fingerprint" value="3" />
+    </attr>
+</resources>

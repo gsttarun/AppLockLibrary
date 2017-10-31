@@ -13,6 +13,7 @@ import android.view.ViewGroup;
  */
 public class AppLockView extends ViewGroup {
     private int mKeyType = 0;
+    private OnValidationCheckListener mValidationCheckListener;
 
     public AppLockView(Context context) {
         super(context);
@@ -44,18 +45,19 @@ public class AppLockView extends ViewGroup {
         switch (mKeyType) {
             default:
             case LockKeyType.PATTERN:
-                view = inflater.inflate(R.layout.activity_lock,this,true);
+                view = inflater.inflate(R.layout.activity_lock, this, true);
                 break;
             case LockKeyType.NUMERIC:
-                view = inflater.inflate(R.layout.activity_lock,this,true);
+                view = inflater.inflate(R.layout.view_numeric_lock, this, true);
                 break;
             case LockKeyType.ALPHANUMERIC:
-                view = inflater.inflate(R.layout.activity_lock,this,true);
-                break;
-            case LockKeyType.FINGERPRINT:
-                view = inflater.inflate(R.layout.activity_lock,this,true);
+                view = inflater.inflate(R.layout.view_alphanumeric_lock, this, true);
                 break;
         }
         addView(view);
+    }
+
+    public void setValidationCheckListener(OnValidationCheckListener mValidationCheckListener) {
+        this.mValidationCheckListener = mValidationCheckListener;
     }
 }

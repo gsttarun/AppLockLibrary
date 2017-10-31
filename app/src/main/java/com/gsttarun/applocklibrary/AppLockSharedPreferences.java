@@ -14,12 +14,13 @@ public class AppLockSharedPreferences {
 
     public static void savePattern(Context context, String pattern) {
         try {
-            SharedPreferences mPrefs = context.getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE);
+            SharedPreferences mPrefs
+                    = context.getSharedPreferences(PREFERENCES_NAME,
+                    Context.MODE_PRIVATE);
             SharedPreferences.Editor prefsEditor = mPrefs.edit();
             prefsEditor.putString(PATTERN, pattern);
             prefsEditor.apply();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -30,8 +31,7 @@ public class AppLockSharedPreferences {
             SharedPreferences.Editor prefsEditor = mPrefs.edit();
             prefsEditor.putString(PASSCODE, passcode);
             prefsEditor.apply();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -44,8 +44,7 @@ public class AppLockSharedPreferences {
             SharedPreferences.Editor prefsEditor = mPrefs.edit();
             prefsEditor.putBoolean(IS_LOCK_ENABLED, isLockEnabled);
             prefsEditor.apply();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -58,8 +57,7 @@ public class AppLockSharedPreferences {
             SharedPreferences.Editor prefsEditor = mPrefs.edit();
             prefsEditor.putBoolean(IS_FINGERPRINT_LOCK_ENABLED, isFingerprintLockEnabled);
             prefsEditor.apply();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -70,8 +68,7 @@ public class AppLockSharedPreferences {
         try {
             SharedPreferences mPrefs = context.getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE);
             return mPrefs.getBoolean(IS_LOCK_ENABLED, false);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return false;
@@ -82,8 +79,7 @@ public class AppLockSharedPreferences {
         try {
             SharedPreferences mPrefs = context.getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE);
             return mPrefs.getBoolean(IS_FINGERPRINT_LOCK_ENABLED, false);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return false;
@@ -94,8 +90,7 @@ public class AppLockSharedPreferences {
         try {
             SharedPreferences mPrefs = context.getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE);
             return mPrefs.getString(PATTERN, "");
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return "";
@@ -106,8 +101,7 @@ public class AppLockSharedPreferences {
         try {
             SharedPreferences mPrefs = context.getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE);
             return mPrefs.getString(PASSCODE, "");
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return "";
